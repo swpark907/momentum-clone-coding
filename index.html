@@ -13,25 +13,28 @@
             <input type="text" class="clock__input" placeholder="What is your name?"/>            
         </form>
         <div class="greeting hide">
-        <h2 class="greeting__greeting">Welcome</h2><h2 class="greeting__username">, World</h2>
+            <h2 class="greeting__greeting">Welcome</h2><h2 class="greeting__username">, World</h2>
+        </div>
+    </div>   
+
+    <div class="todo__container hide">
+        <div class="todo"><h2>Start your day with To-Do!</h2>
+            <ul class="todo__list"></ul>
+            <form action="" class="todo__form">
+                <input type="text" class="todo__input" placeholder="New To-Do">
+            </form>            
         </div>
     </div>
 
-    <div class="to-do">
-        <h2 class="to-do__title">What do you have to do today?</h2>
-        <form class="to-do__form">
-            <input type="text" class="to-do__input"/>
-            <div class="to-do__item">
-                <input type="checkbox" class="to-do__checkbox"></input>
-                <h3 class="to-do__list">asdf</h3>
-                <button class="to-do__delete"></button>                
-            </div>
-            
-        </form>
-        
+    <div class="weather">        
+        <img class="weather__icon"></img>
+        <div class="weather__info"></div>
     </div>
     
     
     <script src="main.js"></script>
+    <script src="todo.js"></script>
+    <script src="weather.js"></script>
+    <script src="bg.js"></script>
 </body>
 </html>

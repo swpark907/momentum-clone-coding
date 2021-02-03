@@ -66,10 +66,14 @@ h3 {
 }
 
 .greeting {
+    display: flex;
     font-size: 35px;
     font-weight: bold;
     transition: all 1s ease;
+}
 
+.greeting.hide {
+    display: none;
 }
 
 .greeting__username {
