@@ -60,3 +60,22 @@ function loadName(){
     }    
 }
 
+// Change greeting message by currnet time
+
+const clockGreeting = document.querySelector('.greeting__greeting');
+function changeGreeting() {
+    const date = new Date();
+    let hours = date.getHours();    
+    if(hours >= 5 && hours < 11){
+        clockGreeting.innerHTML = 'Good morning! ';
+    } else if(hours >= 11 && hours < 16){
+        clockGreeting.innerHTML = 'Good afternoon! ';        
+    } else if(hours >= 16) {
+        clockGreeting.innerHTML = 'Good evening! ';
+    }    
+}
+changeGreeting();
+
+
+
+loadName();
