@@ -28,13 +28,13 @@ const inputForm = document.querySelector('.input__form');
 const USER_LS = "currentUser"
 
 function hide(text) {    
-    text.classList.remove('show')
-    text.classList.add('hide');   
+    text.style.opacity = '0';
+    setTimeout(function(){inputForm.style.display = 'none'}, 1000);
 }
 
 function show(text) {    
-    text.classList.remove('hide')
-    text.classList.add('show');
+    text.style.display = 'flex';
+    setTimeout(function(){text.style.opacity = '1'}, 100);
 }
 
 function loadName(){
@@ -49,12 +49,14 @@ function loadName(){
                 input.placeholder = 'Please enter your name.'
             } else{
                 hide(inputForm);
-                show(greeting);                
-                show(todoContainer);
+                setTimeout(function(){
+                    show(greeting);                
+                    show(todoContainer);}, 1000)               
                 userName.innerHTML = currentUser;
             } 
         })        
-    } else{        
+    } else{
+        inputForm.style.display = 'none';        
         show(greeting);        
         userName.innerHTML = currentUser;                
     }    
